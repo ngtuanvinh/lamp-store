@@ -22,7 +22,10 @@ const Cart = () => {
         <>
           <button onClick={() => cartStore.toggleCart()}>Back to store</button>
           {cartStore.cart.map((product) => (
-            <div className="flex py-4 gap-4 items-center border-b-2 border-b-gray-600 justify-center mb-5">
+            <div
+              key={product.id}
+              className="flex py-4 gap-4 items-center border-b-2 border-b-gray-600 justify-center mb-5"
+            >
               <Image
                 src={product.image}
                 width={150}
